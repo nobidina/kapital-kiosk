@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Капитал</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/fotorama.css" rel="stylesheet">
+</head>
+<body>
+  <div class="house">
+    <div class="house__left-block">
+      <h1 class="house__title">СМАРТ дом на&nbsp;Зубковой</h1>
+      <nav class="main-nav">
+
+        <!--Чтобы добавить кнопке состояние active, нужно дописать ей класс active-->
+
+        <button class="btn  btn_purple" type="button">Инфраструктура района</button>
+        <button class="btn  btn_purple" type="button">Инфраструктура квартала</button>
+        <button class="btn  btn_purple" type="button">Генплан</button>
+        <button class="btn  btn_purple" type="button">3D тур</button>
+        <button class="btn  btn_purple  active" type="button">Как будет</button>
+        <button class="btn  btn_purple" type="button">Качество</button>
+        <a class="btn  btn_purple-border" href="index.html">
+          <i class="btn__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2vw" viewBox="0 0 32 31">
+              <path id="ieyua" d="M176 926.69h-22.06l10.12-10.13-2.56-2.56-14.5 14.5 14.5 14.5 2.56-2.56-10.12-10.13H176z"/>
+              <g>
+                <g opacity=".8" transform="translate(-146 -913)">
+                  <use xlink:href="#ieyua"/>
+                </g>
+              </g>
+            </svg>
+          </i>
+          <span class="btn__text">Выбор дома</span>
+        </a>
+      </nav>
+    </div>
+    <div class="house__right-block">
+      <div class="house__fotorama-wrapper">
+        <div class="house__fotorama">
+          <div id="house-1" class="fotorama" data-auto="false">
+            <div class="fotorama__slide" data-img="img/house-1-slide-1.png">
+              <a class="fotorama__link" href="#">
+              </a>
+            </div>
+            <div class="fotorama__slide" data-img="img/house-1-slide-2.png">
+              <a class="fotorama__link" href="#">
+              </a>
+            </div>
+            <div class="fotorama__slide" data-img="img/house-1-slide-3.png">
+              <a class="fotorama__link" href="#">
+              </a>
+            </div>
+            <div class="fotorama__slide" data-img="img/house-1-slide-4.png">
+              <a class="fotorama__link" href="#">
+              </a>
+            </div>
+            <div class="fotorama__slide" data-img="img/house-1-slide-5.png">
+              <a class="fotorama__link" href="#">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/fotorama.min.js"></script>
+  <script>
+      $(function() {
+          var $fotoramaDiv = $('#house-1').fotorama({
+              width: '100%',
+              height: 'auto',
+              click: false,
+              fit: 'cover',
+              autoplay: true,
+              stopautoplayontouch: false,
+              arrows: 'always',
+              nav: 'thumbs',
+              navwidth: '100%',
+              thumbwidth: '275',
+              thumbheight: '154'
+          });
+      });
+  </script>
+
+</body>
+</html>
